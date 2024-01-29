@@ -1,0 +1,649 @@
+<!DOCTYPE HTML>
+<html lang="pt">
+
+<head>
+  <title>IncluiVida</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Sobre Nós</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+  </noscript>
+  <link rel="icon"
+    href="https://cdn.discordapp.com/attachments/1181248718855475273/1181250843123662981/O_logotipo_da_IncluiVida__meticulosamente_pro-removebg-preview.png?ex=65899b13&is=65772613&hm=b2cc4811141524662395e2bf8bd64810b554ab33bd595a49476f14524162d860"
+    type="image/x-icon" />
+
+</head>
+<style>
+  #banner img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto 0;
+    /* Ajuste as margens conforme necessário */
+    max-height: 200px;
+  }
+
+  #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #header h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  #header a img {
+    max-width: 100px;
+    /* Ajuste o tamanho máximo conforme necessário */
+    height: auto;
+    display: block;
+  }
+
+  /* Adicione esta regra ao seu estilo CSS existente */
+  .logo-small {
+    max-width: 100px;
+    /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    /* Ajuste as margens conforme necessário */
+  }
+
+  /* Adicione esta regra ao seu estilo CSS existente */
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .social-media {
+    text-align: center;
+  }
+
+  .social-media .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-icons li {
+    margin-right: 10px;
+    /* Espaçamento entre os ícones, ajuste conforme necessário */
+  }
+
+  .social-icons span {
+    margin-right: 10px;
+    /* Espaçamento entre o último ícone e o texto, ajuste conforme necessário */
+  }
+
+  /* Adicione ao seu estilo CSS existente */
+  /**
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Exo', sans-serif;
+}*/
+
+  .team-section {
+
+    text-align: center;
+  }
+
+  .inner-width {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+
+    overflow: hidden;
+  }
+
+  .team-section h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    border-bottom: 4px solid;
+    padding-bottom: 10px;
+  }
+
+  .pe {
+    float: left;
+    width: calc(100% / 3);
+    overflow: hidden;
+    padding: 40px 0;
+    transition: 0.4s;
+  }
+
+  .pe:hover {}
+
+  .pe img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+
+  .p-name {
+    margin: 5px;
+    text-transform: uppercase;
+  }
+
+  .p-des {
+    font-style: italic;
+    color: #3498db;
+  }
+
+  .p-sm {
+    margin-top: 6px;
+  }
+
+  .p-sm a {
+    margin: 0 4px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    transition: 0.4s;
+  }
+
+  .p-sm a:hover {
+    transform: scale(1.3);
+  }
+
+  .p-sm a i {
+
+    line-height: 30px;
+  }
+
+  @media screen and (max-width: 960px) {
+    .pe {
+      width: 45%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .pe {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .pe {
+      width: 100%;
+    }
+  }
+
+  @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+  body {
+    margin: 0;
+  }
+
+  h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 48px;
+  }
+
+
+  .header {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    color: white;
+  }
+
+  .logo {
+    width: 50px;
+    fill: white;
+    padding-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .inner-header {
+    height: 65vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .flex {
+    /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+  }
+
+
+
+  /* Animation */
+
+  .parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+  }
+
+  .parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+
+  .parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+
+  .parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+
+  .parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+
+  @keyframes move-forever {
+    0% {
+      transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(85px, 0, 0);
+    }
+  }
+
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    .waves {
+      height: 40px;
+      min-height: 40px;
+    }
+
+    .content {
+      height: 30vh;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+
+  /* Estilizando a barra de rolagem no Chrome, Edge e Safari */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #ffffff;
+  }
+
+  .site-footer {
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .footer-section {
+    flex: 1;
+    max-width: 200px;
+    margin: 0 20px;
+  }
+
+  .footer-section h3 {
+    color: #fff;
+  }
+
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-section li {
+    margin: 5px 0;
+  }
+
+  .partner-section {
+    text-align: center;
+    position: relative;
+  }
+
+
+
+/* Estilos para a seção de Pagamentos Seguros */
+section {
+ 
+ margin: 20px 0;
+ /* Espaçamento ao redor da seção */
+}
+
+
+.payment-logos {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 20px;
+ /* Espaçamento entre as imagens */
+ margin-top: 10px;
+ /* Espaçamento acima das imagens */
+}
+
+.payment-logos img {
+ width: 80px;
+ /* Largura das imagens */
+ height: auto;
+ /* Altura automática mantendo a proporção */
+ border: 1px solid #ccc;
+ /* Borda para separar as imagens */
+ padding: 5px;
+ /* Espaçamento interno nas imagens */
+}
+.partner-section {
+   text-align: center;
+ }
+
+ .payment-section {
+   text-align: center;
+   margin-top: 20px; /* Ajuste conforme necessário */
+ }
+     body {
+                      font-family: 'Lato', sans-serif;
+                      margin: 0;
+                      padding: 0;
+                     
+                  }
+                  .container {
+                      max-width: 1200px;
+                      margin: auto;
+                      padding: 20px;
+                  }
+                  .header, .footer {
+                      color: #ffffff;
+                      text-align: center;
+                      padding: 20px 0;
+                  }
+                  .main-content {
+                      padding: 20px;
+                      margin-top: 20px;
+                      margin-bottom: 20px;
+                  }
+                  .team-member {
+                      text-align: center;
+                      margin-bottom: 20px;
+                  }
+                  .team-member img {
+                      border-radius: 50%;
+                      width: 150px;
+                      height: 150px;
+                  }
+                  .team-member h4 {
+                      margin: 10px 0;
+                  }
+                  .team-member p {
+                      margin: 5px 0;
+                  }
+                  .values-list {
+                      list-style: none;
+                      padding: 0;
+                  }
+                  .values-list li {
+                      margin-bottom: 10px;
+                  }
+                  .values-list i {
+                      margin-right: 10px;
+                  }
+</style>
+</head>
+
+<body class="is-preload">
+
+  <!-- Page Wrapper -->
+  <div id="page-wrapper">
+
+    <header id="header">
+      <!-- Substitua o texto "Solid State" pelo seu logotipo -->
+      <h1><a href="index.html"><img
+            src="https://cdn.discordapp.com/attachments/1181248718855475273/1181250843123662981/O_logotipo_da_IncluiVida__meticulosamente_pro-removebg-preview.png?ex=65899b13&is=65772613&hm=b2cc4811141524662395e2bf8bd64810b554ab33bd595a49476f14524162d860&"
+            alt="Seu Logotipo" class="logo-small"></a></h1>
+      <nav>
+        <a href="#menu">Menu</a>
+      </nav>
+    </header>
+
+    <!-- Menu -->
+    <nav id="menu">
+      <div class="inner">
+        <h2>Menu</h2>
+        <a href="index.html">
+          <img
+            src="https://cdn.discordapp.com/attachments/1181248718855475273/1181250843123662981/O_logotipo_da_IncluiVida__meticulosamente_pro-removebg-preview.png?ex=65806093&is=656deb93&hm=481bd769e0aa46b2d5cfbbc365af4152e2963a56c54ff01b58b7ec6cb59034d7"
+            alt="IncluiVida Logo" class="logo-small">
+        </a>
+        <ul class="links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="generic.html">Projetos</a></li>
+          <li><a href="elements.html">Sobre nós</a></li>
+          <li><a href="contactos.html">Contactos</a></li>
+          <a href="carrinho.html">
+            <img
+              src="https://cdn.discordapp.com/attachments/1181248718855475273/1195753451930521724/imagem_2024-01-11_091610322-removebg-preview.png?ex=65b5232e&is=65a2ae2e&hm=5bf1b1cb64f10a7c7615513015e898c4f8ae332606c848866e7553c96e1b8cd9&"
+              alt="IncluiVida Logo" class="logo-small">
+        </ul>
+        <a href="#" class="close"><i class="fas fa-times"></i></a>
+      </div>
+    </nav>
+
+
+
+    <!-- Wrapper -->
+    <section id="wrapper">
+      <header>
+        <div class="inner">
+          <h2>Sobre Nós</h2>
+          <p>Tudo tem um início, este é o nosso surgimento...</p>
+        </div>
+      </header>
+      <!-- Content -->
+      <div class="wrapper">
+        <div class="inner">         
+        
+          
+          <div class="container">
+              <div class="main-content">
+                  <h2>Bem-vindo à IncluiVida</h2>
+                  <p>Somos uma loja em contínuo crescimento, com uma equipa jovem e dinâmica, focada em oferecer os melhores componentes a preços acessíveis, sem renunciar à qualidade do produto. Nosso site foi criado pensando em você, para oferecer uma navegação intuitiva, atrativa e rápida!</p>
+          
+                  <h3>Por que escolher a IncluiVida?</h3>
+                  <ul>
+                      <li><strong>Compras seguras:</strong> Métodos de pagamento adaptados para segurança e rapidez.</li>
+                      <li><strong>Atenção ao cliente:</strong> Estamos sempre disponíveis para esclarecer suas dúvidas.</li>
+                      <li><strong>Envios rápidos:</strong> Procedimentos ágeis para enviar sua encomenda o mais rápido possível. Envio gratuito para compras acima de 200€.</li>
+                  </ul>
+          
+                  <h3>Conheça nossa equipe</h3>
+                  <div class="team-member">
+                      <img src="https://cdn.discordapp.com/attachments/1181248718855475273/1198958335962128434/1668367167304.png?ex=65c0cbf6&is=65ae56f6&hm=1af32913e787b88c958a34e2fa2ae3d1efb7f237f83fe6921f5bb43be89a27bd&" alt="Hélder Silva">
+                      <h4>Duarte Neves</h4>
+                      <p>Consultor / Técnico</p>
+                      <p>Duarte.Neves@IncluiVida.pt</p>
+                  </div>
+               
+          
+                  <h3>Valores e Princípios</h3>
+                  <ul class="values-list">
+                      <li><i class="fas fa-award"></i>Rigor</li>
+                      <li><i class="fas fa-cogs"></i>Trabalho e eficiência</li>
+                      <li><i class="fas fa-brain"></i>Competência</li>
+                      <li><i class="fas fa-search-dollar"></i>Visão e aposta</li>
+                      <li><i class="fas fa-hand-holding-heart"></i>Acompanhamento</li>
+                      <li><i class="fas fa-smile"></i>Satisfação do cliente</li>
+                  </ul>
+          
+                  <h3>Damos corpo às suas ideias</h3>
+                  <p>Tem uma ideia para um produto? Nós tornamos sua ideia em realidade. Entre em contato conosco!</p>
+          
+                  <h3>Pagamentos Seguros e Protegidos</h3>
+                  <p>Contamos com diversas formas de pagamento para garantir sua segurança e comodidade.</p>
+              </div>
+          </div>
+          
+        
+          
+          </body>
+          </html>
+          
+
+
+          <!-- Seção de Oferta de Serviços -->
+          <section>
+            <h3 class="major">
+              <i class="fas fa-cogs"></i> <!-- Substitua "fa-cogs" pelo ícone desejado -->
+              Oferta de Serviços
+            </h3>
+            <p>Não encontra o que procura? Conte connosco para oferecer soluções personalizadas e inovadoras.</p>
+          </section>
+
+
+    </section>
+    <footer class="site-footer">
+      <div class="footer-section">
+        <h3>Nossos Projetos</h3>
+        <ul>
+          <li><a href="generic.html">Projetos de Acessibilidade</a></li>
+          <li><a href="#">Projetos para Inclusão Social</a></li>
+          <li><a href="#">Adaptação de Espaços</a></li>
+          <!-- Adicione outros projetos aqui -->
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Recursos Úteis</h3>
+        <ul>
+          <li><a href="#">Guias de Acessibilidade</a></li>
+          <li><a href="#">Legislação sobre Inclusão</a></li>
+          <li><a href="#">Tecnologias Assistidas</a></li>
+          <!-- Adicione outros recursos aqui -->
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Nossos Compromissos</h3>
+        <ul>
+          <li><a href="#">Promover a Inclusão</a></li>
+          <li><a href="#">Respeitar a Diversidade</a></li>
+          <li><a href="#">Acessibilidade Universal</a></li>
+          <!-- Adicione outros compromissos aqui -->
+        </ul>
+      </div>
+      <div class="footer-section" style="text-align: center;">
+        <!-- Logotipo Maker 4.0 Store -->
+        <img
+          src="https://media.discordapp.net/attachments/1181248718855475273/1181250843123662981/O_logotipo_da_IncluiVida__meticulosamente_pro-removebg-preview.png?ex=65ae8513&is=659c1013&hm=fa586d7dd3553ee63c22ed4b3bed990132782b05d271f4675fcdb23e5dab4b3c&=&format=webp&quality=lossless"
+          alt="Maker 4.0 Store Logotipo Branco" style="width: 150px; margin-top: 10px;">
+
+        <!-- Links para redes sociais -->
+        <div class="social-media-links" style="margin-top: 10px;">
+          <a href="https://www.instagram.com/incluivida/" class="icon brands fa-instagram"><span
+              class="label">Instagram</span></a>
+          <a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+          <a href="#" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a>
+        </div>
+
+
+      </div>
+      <!-- Adicione outras opções de contato aqui -->
+    </div>
+    <!-- Adicione outras opções de contato aqui -->
+  </footer>
+  <div class="partner-section">
+    <h3>Parcerias</h3>
+    <!-- Adicione logotipos dos parceiros -->
+    <div class="partner-logos">
+      <a href="https://guilhermes13.github.io/Dose-Certa/">
+        <img src="https://cdn.discordapp.com/attachments/1181248718855475273/1196389017424506880/cria_um_logtipo_que_contenha_uma_caixa_de_medic-removebg-preview.png?ex=65b77319&is=65a4fe19&hm=61b223e63683c9664c34235e954bd0534ad413b80d026834880f0e9783f5d4b3&"
+          alt="Logo Parceiro 1" style="width: 100px; height: auto;">
+      </a>
+      <a href="https://maker4ponto0.pt">
+        <img src="caminho/do/logotipo2.png" alt="Logo Parceiro 2" style="width: 100px; height: auto;">
+      </a>
+    </div>
+  </div>
+
+  <div class="payment-section">
+    <h3 class="major">Pagamentos Seguros e Protegidos</h3>
+    <div class="payment-logos">
+      <img src="https://cdn.discordapp.com/attachments/1181248718855475273/1200406436140830720/image-removebg-preview_4.png?ex=65c6109c&is=65b39b9c&hm=2b2f7cbcc5e29b24e407ca7a963e0aa40240991d9358e5c21ecc8d1258503c03&"
+        alt="Logo Visa">
+      <img src="https://cdn.discordapp.com/attachments/1181248718855475273/1200407069367480453/image-removebg-preview_8.png?ex=65c61133&is=65b39c33&hm=e6584f4fc8c0aceb480b5481ae85e9db1c01b88a935fe88173bb3857b016dd79&"
+        alt="Logo Mastercard">
+      <img src="https://cdn.discordapp.com/attachments/1181248718855475273/1200407291258740827/image-removebg-preview_9.png?ex=65c61168&is=65b39c68&hm=70b8e783d2fc344e5223159a47f88888914b9966c73943e5237aac87a362c888&"
+        alt="Logo PayPal">
+      <img src="https://cdn.discordapp.com/attachments/1181248718855475273/1200407547933376512/image-removebg-preview_10.png?ex=65c611a5&is=65b39ca5&hm=654619748b229e31e4b07f292094b5f331738a1e1f36fa72d43e6bbe75f4f332&"
+        alt="Logo MB">
+      <!-- Adicione mais logos conforme necessário -->
+    </div>
+  </div>
+      </section>
+    </div>
+
+      <!--Waves Container-->
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+        </svg>
+      </div>
+      <!--Waves end-->
+
+
+      <!-- Scripts -->
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/js/jquery.scrollex.min.js"></script>
+      <script src="assets/js/browser.min.js"></script>
+      <script src="assets/js/breakpoints.min.js"></script>
+      <script src="assets/js/util.js"></script>
+      <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

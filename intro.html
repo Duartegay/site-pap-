@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <title>Seu Site</title>
+
+</head>
+<style>
+  .o-anim-container {
+    background: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    visibility: hidden;
+    margin: 0;
+    animation-name: overlay;
+    animation-duration: 6s;
+  }
+
+  .o-anim-logo {
+    background: url('https://colours.mx/wp-content/uploads/2022/09/colours-cmx-logo.svg') center center no-repeat;
+    background-size: 100% 100%;
+    width: 240px;
+    height: 43px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: opacity;
+    animation-duration: 6s;
+  }
+
+  .o-anim-logo:after {
+    content: '';
+    background: white;
+    box-shadow: -6px 0 12px rgba(255, 255, 255, 0.6);
+    width: 100%;
+    height: 28px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation-name: bar1;
+    animation-duration: 6s;
+    animation-direction: normal;
+  }
+
+  .o-anim-logo:before {
+    content: '';
+    background: white;
+    width: 100%;
+    height: 12px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    animation-name: bar2;
+    animation-duration: 6.6s;
+    animation-direction: normal;
+  }
+
+  @keyframes overlay {
+    0% {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    95% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+
+    25% {
+      opacity: 1;
+    }
+
+    75% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes bar1 {
+    0% {
+      width: 100%;
+    }
+
+    25% {
+      width: 0;
+    }
+
+    75% {
+      width: 0;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes bar2 {
+    0% {
+      width: 100%;
+    }
+
+    10% {
+      width: 100%;
+    }
+
+    30% {
+      width: 0;
+    }
+
+    60% {
+      width: 0;
+    }
+
+    90% {
+      width: 100%;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+</style>
+
+<body>
+
+  <div class="o-anim-container">
+    <div class="o-anim-logo"></div>
+    <meta http-equiv="refresh" content="5;url=index.html">
+
+  </div>
+
+</body>
+
+</html>
